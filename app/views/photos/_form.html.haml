@@ -1,0 +1,9 @@
+= form_for([@album, @photo], :html_options => {:multipart => true}) do |f|
+  .field
+    = f.label :desc
+    = f.text_area :desc
+  .field
+    = f.label :url
+    = f.file_field :url
+  .actions
+    = f.submit 'Save'

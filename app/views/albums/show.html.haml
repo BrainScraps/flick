@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @album.name
+  - if @album.photos.empty?
+    %h2 Add some photos, homie.
+  - else
+    .module
+      - @album.photos.each do |photo|
+        .photo
+          = raw "<img class='img-polaroid' src='#{photo.url}'/>"
+  = link_to "Add photo", new_album_photo_path( @album) , class: "btn btn-info"
+
+= link_to 'Edit', edit_album_path(@album)
+\|
+= link_to 'Back', albums_path

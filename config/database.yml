@@ -1,0 +1,19 @@
+development: 
+  adapter: postgresql
+  encoding: unicode
+  database: flick_development
+  pool: 5
+  host: localhost
+  username: isaac 
+  password: sqlsql
+
+  test:
+    adapter: postgresql
+    encoding: unicode
+    database: flick_test
+    pool: 5
+    host: localhost
+    username: isaac
+    password: sqlsql
+      
+
