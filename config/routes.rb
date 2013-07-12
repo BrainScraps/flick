@@ -1,4 +1,21 @@
 Flick::Application.routes.draw do
+  get "password_resets/create"
+
+  get "password_resets/edit"
+
+  get "password_resets/update"
+
+  get "user_sessions/new"
+
+  post "user_sessions/create"
+
+  get "user_sessions/destroy"
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  resources :users
+  resources :password_resets
+
   resources :albums
   resources :photos
   resources :albums do

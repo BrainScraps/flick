@@ -5,6 +5,7 @@ gem 'pg'
 gem 'nokogiri', '~> 1.5.0'
 gem 'fog'
 gem 'carrierwave'
+gem 'sorcery'
 
 group :development do
   gem 'pry-rails'
